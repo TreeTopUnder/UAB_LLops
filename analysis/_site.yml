@@ -3,10 +3,16 @@ output_dir: ../docs
 navbar:
   title: "UAB_LLops"
   left:
-  - text: Home
+  - text: Introducción
     href: index.html
-  - text: About
+  - text: Analisis Exploratorio
+    href: Exploratory_v1.html
+  - text: Población Osos
+    href: Osos_v1.html
+  - text: Conclusiones
     href: about.html
+  - text: Metadatos
+    href: MetadataExplorer.html
   - text: License
     href: license.html
 output:
