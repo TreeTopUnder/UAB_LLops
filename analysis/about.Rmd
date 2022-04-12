@@ -1,5 +1,19 @@
 ---
-title: "About"
+title: "Conclusiones"
+author: "Marc Noguera-Julian, PhD. TreeTopUnder"
+date: "`r format(Sys.time(), '%Y-%m-%d')`"
+header-includes:
+- \usepackage{fancyhdr}
+- \usepackage{lipsum}
+- \pagestyle{fancy}
+- \fancyhead[CO,CE]{Microbioma y fauna salvaje}
+- \fancyfoot[LO,RE]{Marc Noguera-Julian, TreeTopUnder}
+- \fancyhead[LE,RO]{\thepage}
+- \fancyfoot[CO,CE]{}
+- \usepackage[default]{sourcesanspro}
+- \usepackage[T1]{fontenc}
+- \usepackage{eso-pic,graphicx,transparent}
+mainfont: Helvetica
 output:
   workflowr::wflow_html:
     toc: false
@@ -7,4 +21,20 @@ editor_options:
   chunk_output_type: console
 ---
 
-Describe your project.
+
+
+El objetivo de este estudio es describir el microbioma intestinal de varios ejemplares de oso y lobo que habitan la región del pirineo. Además, se pretende ver si, usando datos de microbioma, se puedes detectar diferencias entre los grupos de edad, sexo o region geografica. Estos datos estan asociados a cada una de las muestras en los metadatos proporcionados. Del análisis de los datos proporcionados, se concluye que:
+
+* Los datos de secuenciación obtenidos son de calidad suficiente para la caracterización del microbioma intestinal en la población de osos.
+* Se obtuvieron también datos de calidad suficiente para la población de lobos que, de igual forma, permiten la caracterización de su microbioma intestinal.Aun así, la limitada informacion disponible sobre los ejemplares de lobo de los cuales provienen las muestras 
+* El microbioma intestinal es significativamente diferente entre lobos y osos, con diferencias en generos relevantes como _Streptococcus_ y _Escherichia-Shifella_, abundantes en las muestras de osos pero no detectados en las muestras de lobos.
+* No se observa correlación entre la diversidad alfa (Shannon) y las caracteristicas disponibles de los ejemplares de osos, ni por grupos de edad, sexo o region geografica.
+* Dentro de la población de osos, no se detectan un efecto significativo de los factores de edad, sexo o región geografica en la composicion del microbioma intestinal.
+* Dentro de la población de osos, se detectan diferencias significativas en la abundancia de ciertos generos de baja prevalencia y abundancia por grupos de Edad y sexo.
+* No se observa una menor beta-diversidad entre muestras de un mismo individuo y muestras de diferentes individuos. Esto es un resultado que contrasta con las tendencias habituales en otras especies, particularmente en humanos, donde hay mas datos longitudinals disponibles.
+
+
+
+```{r sessionInfo, echo=FALSE, results='hide',fig.keep='all',fig.cap="Análisis de ordenacion NMDS/WUnifrac. En color se representa la especie del individuo.", message=FALSE, warning=FALSE, paged.print=FALSE,results='hide',}
+pander::pander(sessionInfo())
+```
