@@ -43,7 +43,7 @@ El objetivo del estudio es caracterizar el microbioma fecal de fauna salvaje (os
 
 ## Analisis de datos de secuencia.
 Los datos crudos recibidos (formato FASTQ) se han obtenido usando un dieseño de amplicon unico en la region 16S del gen del RNA ribosomico (rDNA), amplificando la sub-region variable V3-V4 mediante PCR y usando secuenciación de última generación (Illumina/MiSeq) sobre las librerias obtenidas. Asi, las lecturas crudas obtenides tienen una longitud de 300 nt en un esquema paired-end (300 nt en lecturas forward y 300 nt en lecturas en reverse) sobre un amplicon de entre 450 y 500 nt, por lo que las lecturas forward y reverse tienen cierto grado de solapamiento que se usa para mejorar la calidad de los datos.
-En base a los datos crudos obtenidos de muestras orales (saliva) de los pacientes se ha realizado el análisis de secuencia dentro del framework R::DADA2. Este software nos permite obtener secuencias exactas de las variantes estudiadas (Amplicon Sequence Variants o ASV) y una informació de contaje y asignación taxonómica de cada una de ellas. El proceso de análisi se secuencia se divide en los siguientes pasos:
+En base a los datos crudos obtenidos de muestras fecales proporcionadas se ha realizado el análisis de secuencia dentro del framework R::DADA2. Este software nos permite obtener secuencias exactas de las variantes estudiadas (Amplicon Sequence Variants o ASV) y una informació de contaje y asignación taxonómica de cada una de ellas. El proceso de análisi se secuencia se divide en los siguientes pasos:
 
 * Control de calidad. Se eliminan las secuencias con demasiado error acumulado en la lectura forward o reverse, de froma independiente. Se eliminan las secuencias demasiados cortas.
 * Se calcula el modelo de error especifico del experimento de secuenciación.
@@ -117,7 +117,7 @@ De las 96 muestras disponibles, 8 muestras pertenecen a controles que no se usar
 
 En el dataset resultante, se usaran exclusivamente las ASV anotadas taxonómicamente a Bacteria o Arqueas (Kingdom = Archaea o Kingdom = Bacteria)
 
-```{r Consolidación de datos y metadatos, echo=F, message=FALSE, warning=FALSE, paged.print=FALSE}
+```{r Consolidacion de datos y metadatos, echo=F, message=FALSE, warning=FALSE, paged.print=FALSE}
 suppressWarnings(require(phyloseq))
 suppressWarnings(require(pander))
 suppressWarnings(require(here))
