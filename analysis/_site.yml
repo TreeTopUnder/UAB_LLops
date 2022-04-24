@@ -4,13 +4,13 @@ navbar:
   title: "UAB_LLops"
   left:
   - text: Introducción
-    href: index.html
+    href: 01_index.html
   - text: Analisis Exploratorio
-    href: Exploratory_v1.html
+    href: 02_Exploratory_v1.html
   - text: Población Osos
-    href: Osos_v1.html
+    href: 03_Osos_v1.html
   - text: Conclusiones
-    href: about.html
+    href: 04_about.html
   - text: Metadatos
     href: MetadataExplorer.html
   - text: License
