@@ -9,6 +9,8 @@ navbar:
     href: 02_Exploratory_v1.html
   - text: Población Osos
     href: 03_Osos_v1.html
+  - text: Dieta en Osos
+    href: 031_Dieta_en_Osos_v1.html
   - text: Conclusiones
     href: 04_about.html
   - text: Metadatos

@@ -13,7 +13,7 @@
 
 <meta name="date" content="2022-05-09" />
 
-<title>Análisis de la subpoblación de osos</title>
+<title>Análisis de dieta en osos</title>
 
 <script src="site_libs/header-attrs-2.13/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -366,7 +366,7 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Análisis de la subpoblación de osos</h1>
+<h1 class="title toc-ignore">Análisis de dieta en osos</h1>
 <h4 class="author">Marc Noguera-Julian, PhD. TreeTopUnder</h4>
 <h4 class="date">2022-05-09</h4>
 
@@ -540,146 +540,39 @@ Note that any generated files, e.g. HTML, png, CSS, etc., are not included in t
 <hr>
 </div>
 <div id="versions" class="tab-pane fade">
-
 <p>
-These are the previous versions of the repository in which changes were made to the R Markdown (<code>analysis/03_Osos_v1.Rmd</code>) and HTML (<code>docs/03_Osos_v1.html</code>) files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view the files as they were in that past version.
+There are no past versions. Publish this analysis with <code>wflow_publish()</code> to start tracking its development.
 </p>
-<div class="table-responsive">
-<table class="table table-condensed table-hover">
-<thead>
-<tr>
-<th>
-File
-</th>
-<th>
-Version
-</th>
-<th>
-Author
-</th>
-<th>
-Date
-</th>
-<th>
-Message
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/TreeTopUnder/UAB_LLops/8a09510596aaca5aa5b9fc0fff7f397cb18d8987/docs/03_Osos_v1.html" target="_blank">8a09510</a>
-</td>
-<td>
-Marc Noguera-Julian
-</td>
-<td>
-2022-04-30
-</td>
-<td>
-final update
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/TreeTopUnder/UAB_LLops/9ca78cd48e8732fe2db42779e73314e0160eca85/docs/03_Osos_v1.html" target="_blank">9ca78cd</a>
-</td>
-<td>
-Marc Noguera-Julian
-</td>
-<td>
-2022-04-30
-</td>
-<td>
-Final commit
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/TreeTopUnder/UAB_LLops/7913ffe507709039e7a7dea658fcc93715a7b246/docs/03_Osos_v1.html" target="_blank">7913ffe</a>
-</td>
-<td>
-Marc Noguera-Julian
-</td>
-<td>
-2022-04-24
-</td>
-<td>
-final version
-</td>
-</tr>
-</tbody>
-</table>
-</div>
 <hr>
 </div>
 </div>
 </div>
-<p>Como objetivo principal del estudio procedemos a analizar las muestras fecales obtenidas de ejemplares de osos. En el conjunto de muestras encontramos varias muestras obtenidas de un mismo individuo asi como invididuos de los que se ha obtenido una sola muestra. Asi pués,aracterizaremos la beta-diversidad apareada entre muestra de un mismo individuo y la compararemos con la beta-diversidad de individuos diferentes En el conjunto de individuos muestreados, usaremos las variables <em>Edad</em> (Osezno, Subadulto y Adulto) y <em>Sexo</em> (Macho y Hembra) para detectar diferencias significativas a nivel de alfa-diversidad o de abundancia relativa en generos bacterianos.</p>
-<div id="beta-diversidad" class="section level2">
-<h2>Beta-Diversidad</h2>
-<div id="ordenacion" class="section level3">
-<h3>Ordenacion</h3>
-<p>Usando el mismo método de anàlisis que en la sección previa, usamos la similitud entre la composición del microbioma fecal para realizar un análisi de ordenacion.</p>
-<p><em>Deliverables: NMDS_StressPlot_osos.pdf, Ordination_OsoSamples.pdf</em></p>
-<p>No se observa una agrupación ni por grupos de edad, region ni por sexo en el grupo de muestras de osos.</p>
-<p><img src="figure/03_Osos_v1.Rmd/ordenacion%20osos-1.png" width="672" style="display: block; margin: auto;" /></p>
-<p>
-<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-ordenacion-osos-1">
-Past versions of "ordenacion osos-1.png"
-</button>
-</p>
-<div id="fig-no-spaces-ordenacion-osos-1" class="collapse">
-<div class="table-responsive">
-<table class="table table-condensed table-hover">
-<thead>
-<tr>
-<th>
-Version
-</th>
-<th>
-Author
-</th>
-<th>
-Date
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://github.com/TreeTopUnder/UAB_LLops/blob/7913ffe507709039e7a7dea658fcc93715a7b246/docs/figure/03_Osos_v1.Rmd/ordenacion osos-1.png" target="_blank">7913ffe</a>
-</td>
-<td>
-Marc Noguera-Julian
-</td>
-<td>
-2022-04-24
-</td>
-</tr>
-</tbody>
-</table>
+<p>En este apartado del análisis queremos caracterizar el efecto de la dieta del animal en el microbioma. Para cada muestra de la cual se ha analizado el microbioma, también se ha realizado el estudio de la dieta. Se ha obtenido, para cada muestra un conjunto de variables:</p>
+<ul>
+<li>Vertebrados: Contenido de vertebrados en la dieta.</li>
+<li>Invertebrados: Contenido de invertebrados en la dieta</li>
+<li>Vegetal: Contendio de componentes vegetales en la dieta</li>
+</ul>
+<p>Para simplificar, agrupamos estas tres variables en las variables <em>dieta_v1 y dieta_v2</em> que se diferencian en la forma de agrupar la deteccion de invertebrados en la dieta. Estas variables toman los valores:</p>
+<ul>
+<li><p>dieta_v1: toma los valores: <em>“Animal”, cuando se detectan vertebrados en las heces pero no invertrebrados o vegetales </em>”Vegetal”, cuando se detectan vegetales en las heces pero no vertebrados o invertebrados *“Ani+Veg”, cuando se detectan vegetales y vertebrados y/o invertebrados.</p></li>
+<li><p>dieta_v2: toma los valores: <em>“Animal”, cuando se detectan vertebrados en las heces pero no invertrebrados o vegetales </em>”Vegetal”, cuando se detectan vegetales y/o invertebrados en las heces pero no vertebrados *“Ani+Veg”, cuando se detectan vegetales y vertebrados.</p></li>
+</ul>
+<div id="alfa-diversidad-y-dieta" class="section level3">
+<h3>Alfa-Diversidad y dieta</h3>
+<p><em>Deliverables: AlphaDiversity_vs_Vertebrado_osos.pdf, AlphaDiversity_vs_Invertebrado_osos.pdf, AlphaDiversity_vs_Vegetal_osos.pdf y AlphaDiversity_vs_dieta_osos.pdf</em></p>
+<p>No se observan diferencias en alfa-diversida en los grupos definidos, usando los parametros Chao1, Shannon y PhyloDist.</p>
+<p><img src="figure/031_Dieta_en_Osos_v1.Rmd/alfa-diversity%20vs%20dieta-1.png" width="480" style="display: block; margin: auto;" /></p>
 </div>
-</div>
-</div>
-<div id="permanova" class="section level3">
-<h3>PERMANOVA</h3>
-<p><em>Deliverables: Adonis_Oso.xls</em></p>
-<p>Para testear estadísticamente la influencia de las variables secundarias (Edad, Sexo) en la estructura composicional del microbioma fecal usamos el test de ANOVA permutacional (vegan::adonis) sobre las muestras de Oso.</p>
-<p>No se detecta una asociación entre el grupo de edad, el sexo o la region geografica y la composición del microbioma (p&gt;0.05). Tampoco se detecta relación con el individuo asociado a la muestra, después de eliminar del dataset los individuos con una sola muestra.</p>
+<div id="ordenacion-por-dieta" class="section level3">
+<h3>Ordenacion por dieta</h3>
+<p>En este análisis pretendemos valorar el impacto que tiene sobre la composición del microbioma el hecho que la muestra este asociada a una dieta que contiene Vertebrados/Invertebrado/Vegetales o el ser una dieta clasificada como Vegatal/Animal. En primer lugar, se utiliza el metodo PERMANOVA para valorar el efecto de cada variable de forma independiente. Para las variables con un efecto significativo se usara el análisis de ordenación para proyectar gráficamente el valor de esas variables.</p>
+<p><em>Deliverables: Adonis_Oso_Dieta.xls, Ordination_OsoSamples_dieta_v1.pdf y Ordination_OsoSamples_dieta_v2.pdf </em></p>
+<p>No se detecta un efecto significativo de las variables <em>dieta_v1</em> sobre la estructura composicional del microbioma. En cambio, se detecta un efecto pequeño (6.39%) pero significativo (p&lt;0.01) de la variable <em>dieta_v2</em> que refleja el hecho de detectar material genético de animales vertebrados en las muestras de heces. En el análisis de ordenación se puede observar, visualmente, como las muestras en las que se han detectado vertebrados se distinguen levemente del resto de muestras (vegetales y invertebrados) en el espacio de ordenación.</p>
+<pre><code>[1] TRUE</code></pre>
 <table>
 <thead>
 <tr class="header">
-<th align="left"></th>
 <th align="left">term</th>
 <th align="right">df</th>
 <th align="right">SumOfSqs</th>
@@ -690,345 +583,48 @@ Marc Noguera-Julian
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Sexo.1</td>
-<td align="left">Sexo</td>
-<td align="right">1</td>
-<td align="right">0.1942048</td>
-<td align="right">0.0208859</td>
-<td align="right">1.5785218</td>
-<td align="right">0.134</td>
+<td align="left">dieta_v2</td>
+<td align="right">2</td>
+<td align="right">0.5937088</td>
+<td align="right">0.0638843</td>
+<td align="right">2.4640957</td>
+<td align="right">0.008</td>
 </tr>
 <tr class="even">
-<td align="left">Edad.1</td>
-<td align="left">Edad</td>
-<td align="right">2</td>
-<td align="right">0.1652095</td>
-<td align="right">0.0178969</td>
-<td align="right">0.6560285</td>
-<td align="right">0.788</td>
+<td align="left">dieta_v1</td>
+<td align="right">1</td>
+<td align="right">0.0258097</td>
+<td align="right">0.0027772</td>
+<td align="right">0.2142379</td>
+<td align="right">0.985</td>
 </tr>
 <tr class="odd">
-<td align="left">Region.1</td>
-<td align="left">Region</td>
-<td align="right">2</td>
-<td align="right">0.3497258</td>
-<td align="right">0.0376114</td>
-<td align="right">1.4264690</td>
-<td align="right">0.147</td>
+<td align="left">Residual</td>
+<td align="right">72</td>
+<td align="right">8.6739803</td>
+<td align="right">0.9333385</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
 </tr>
 <tr class="even">
-<td align="left">Individuo.1</td>
-<td align="left">Individuo</td>
-<td align="right">18</td>
-<td align="right">2.0470145</td>
-<td align="right">0.3321253</td>
-<td align="right">0.9393196</td>
-<td align="right">0.611</td>
+<td align="left">Total</td>
+<td align="right">75</td>
+<td align="right">9.2934988</td>
+<td align="right">1.0000000</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
 </tr>
 </tbody>
 </table>
+<p><img src="figure/031_Dieta_en_Osos_v1.Rmd/ordenacion%20osos%20vs%20dieta-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
-<div id="intra-vs-inter" class="section level3">
-<h3>Intra vs Inter</h3>
-<p>En este análisis pretendemos detectar si la variabilidad en la composición del microbioma entre especímenes del mismo individuo es significativamente diferente que la composición entre especímenes de diferentes individuos en la población de osos de la que se han recogido muestras. Con este objetivo, calculamos las distancias WUnifrac para cada par de muestras, y a cada valor de distancia lo etiquetamos como proveniente del mismo individuo (Intra) o de diferentes individuos (Inter) para despues comparar la distribución de estos valors y sus diferencias entre los grupos descritos.</p>
-<p><em>Deliverables: BetaDiversity_intra.vs.inter_osos.pdf</em></p>
-<p>No se observan diferencias estadísticamente significativas entre la variabilidad asociada a especimenes del mismo animal y especimenes de distintos animales en la población de osos. Asi pues la composición del microbioma intestinal de un mismo animal no es más ni menos estable que el de distintos animales. Este resultado es concordante con el resultado de la anova permutacional en relacion a la variable individuo y se puede explicar por la distancia temporal en el muestreo de un mismo animal o por efectos externos que pudieran modificar la composicion de las muestras.</p>
-<p><img src="figure/03_Osos_v1.Rmd/beta-diversidad%20intra%20vs%20inter-1.png" width="672" style="display: block; margin: auto;" /></p>
-<p>
-<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-beta-diversidad-intra-vs-inter-1">
-Past versions of "beta-diversidad intra vs inter-1.png"
-</button>
-</p>
-<div id="fig-no-spaces-beta-diversidad-intra-vs-inter-1" class="collapse">
-<div class="table-responsive">
-<table class="table table-condensed table-hover">
-<thead>
-<tr>
-<th>
-Version
-</th>
-<th>
-Author
-</th>
-<th>
-Date
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://github.com/TreeTopUnder/UAB_LLops/blob/9ca78cd48e8732fe2db42779e73314e0160eca85/docs/figure/03_Osos_v1.Rmd/beta-diversidad intra vs inter-1.png" target="_blank">9ca78cd</a>
-</td>
-<td>
-Marc Noguera-Julian
-</td>
-<td>
-2022-04-30
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/TreeTopUnder/UAB_LLops/blob/7913ffe507709039e7a7dea658fcc93715a7b246/docs/figure/03_Osos_v1.Rmd/beta-diversidad intra vs inter-1.png" target="_blank">7913ffe</a>
-</td>
-<td>
-Marc Noguera-Julian
-</td>
-<td>
-2022-04-24
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-<div id="madre-hijos" class="section level3">
-<h3>Madre-Hijos</h3>
-<p>En este análisis se pretende detectar si la similitud del microbioma intestinal entre animales que forman parte de un mismo núcleo familiar (el formado por una osa hembra y los oseznos a su cuidado) es mas elevada que la similitud entre individuos no conectados. Para definir que las dos muestras comparadas provienen de un “núcleo familiar”, requerimos:</p>
-<ul>
-<li>Las dos muestras son de individuos diferentes</li>
-<li>Los dos individuos tienen una relación de parentesco Madre-hijo</li>
-<li>Una de los individuos esta clasificado con Edad=“Osezno” en el momento de toma de muestra</li>
-<li>Las dos muestras se han tomado en el mismo año (variable Year).</li>
-</ul>
-<p><em>Deliverables: BetaDiversity_madre_hijo_osos.pdf</em></p>
-<p>No se observan diferencias en cuanto a la beta-diversidad comparando muestras de un mismo núcleo familiar o muestras de individuos independientes.</p>
-<p><img src="figure/03_Osos_v1.Rmd/madre_hijo-1.png" width="672" style="display: block; margin: auto;" /></p>
-<p>
-<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-madre_hijo-1">
-Past versions of madre_hijo-1.png
-</button>
-</p>
-<div id="fig-madre_hijo-1" class="collapse">
-<div class="table-responsive">
-<table class="table table-condensed table-hover">
-<thead>
-<tr>
-<th>
-Version
-</th>
-<th>
-Author
-</th>
-<th>
-Date
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://github.com/TreeTopUnder/UAB_LLops/blob/8a09510596aaca5aa5b9fc0fff7f397cb18d8987/docs/figure/03_Osos_v1.Rmd/madre_hijo-1.png" target="_blank">8a09510</a>
-</td>
-<td>
-Marc Noguera-Julian
-</td>
-<td>
-2022-04-30
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/TreeTopUnder/UAB_LLops/blob/9ca78cd48e8732fe2db42779e73314e0160eca85/docs/figure/03_Osos_v1.Rmd/madre_hijo-1.png" target="_blank">9ca78cd</a>
-</td>
-<td>
-Marc Noguera-Julian
-</td>
-<td>
-2022-04-30
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-<div id="análisis-de-las-variables-secundarias-edad-y-sexo." class="section level2">
-<h2>Análisis de las variables secundarias (Edad y Sexo).</h2>
-<p>En este análisis se responderá a las preguntas relacionadas con el cambio de la composición del microbioma (parametrizado con alfa diversidad o composición global) en relación a la edad de los individuos o al sexo de los mismos. Este análisis se realizara unicamente en la población de osos.</p>
-<div id="comparativa-en-alfa-diversidad-entre-grupos-de-edad-y-sexo" class="section level3">
-<h3>Comparativa en alfa-diversidad entre grupos de edad y sexo</h3>
-<p>Comparativa no paramétrica (Wilcoxon/Kruskal-Wallis) en diversidad alfa (Chao1,Shannon) entre grupos de edad, sexo y Region</p>
-<p><em>Deliverables: AlphaDiversity_osos.pdf</em></p>
-<p>No se observan diferencias en cuanto a alfa-diversidad en los diferentes de grupos de edad en la población de osos muestreada. No se observan diferencias en cuanto a alfa-diversidad entre machos y hembras en la población de osos muestreada. No se observan diferencias en cuanto a alfa-diversidad entre regiones geográficas en la población de osos muestreada.</p>
-<p><img src="figure/03_Osos_v1.Rmd/alfa-diversity%20vs%20age-1.png" width="480" style="display: block; margin: auto;" /></p>
-<p>
-<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-alfa-diversity-vs-age-1">
-Past versions of "alfa-diversity vs age-1.png"
-</button>
-</p>
-<div id="fig-no-spaces-alfa-diversity-vs-age-1" class="collapse">
-<div class="table-responsive">
-<table class="table table-condensed table-hover">
-<thead>
-<tr>
-<th>
-Version
-</th>
-<th>
-Author
-</th>
-<th>
-Date
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://github.com/TreeTopUnder/UAB_LLops/blob/9ca78cd48e8732fe2db42779e73314e0160eca85/docs/figure/03_Osos_v1.Rmd/alfa-diversity vs age-1.png" target="_blank">9ca78cd</a>
-</td>
-<td>
-Marc Noguera-Julian
-</td>
-<td>
-2022-04-30
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/TreeTopUnder/UAB_LLops/blob/7913ffe507709039e7a7dea658fcc93715a7b246/docs/figure/03_Osos_v1.Rmd/alfa-diversity vs age-1.png" target="_blank">7913ffe</a>
-</td>
-<td>
-Marc Noguera-Julian
-</td>
-<td>
-2022-04-24
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-<div id="abundancia-diferencial-entre-grupos-de-edad-y-sexo." class="section level3">
-<h3>Abundancia diferencial entre grupos de edad y sexo.</h3>
-<p>Comparativa (Wilcoxon) entre la abundancia de difernetes generos bacterianos entre grupos de edad y sexo y la valoración del <em>effect size</em> en la diferencia mediante el paquete <em>lefser</em>.</p>
-<p><em>Deliverables: Lefse_vs_Edad.pdf, Lefse_vs_Sexo.pdf y boxplots independientes para cada género positivo al test</em></p>
-<p>Se observan taxas diferencialmente abundantes entre grupos de edad (Adulto vs otros, Subadultos vs otros, Osezno vs Otros) mediante <em>lefser</em>(<a href="http://www.bioconductor.org/packages/release/bioc/html/lefser.html" class="uri">http://www.bioconductor.org/packages/release/bioc/html/lefser.html</a>).La abundancia relativa diferencial detectada, se da en estos casos en generos poco abundantes y se debe a un subgrupo reducido de individuos donde estos géneros se pueden detectar.</p>
-<p>Se observan taxas diferencialmente abundantes entre machos y hembras en la población de osos muestreada, mediante <em>lefser</em>(<a href="http://www.bioconductor.org/packages/release/bioc/html/lefser.html" class="uri">http://www.bioconductor.org/packages/release/bioc/html/lefser.html</a>). La abundancia relativa diferencial detectada, se da en estos casos en generos poco abundantes y se debe a un subgrupo reducido de individuos donde estos géneros se pueden detectar.</p>
-<p><img src="figure/03_Osos_v1.Rmd/DA%20vs%20Age%20Group%20and%20Sex-1.png" width="672" style="display: block; margin: auto;" /></p>
-<p>
-<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-DA-vs-Age-Group-and-Sex-1">
-Past versions of "DA vs Age Group and Sex-1.png"
-</button>
-</p>
-<div id="fig-no-spaces-DA-vs-Age-Group-and-Sex-1" class="collapse">
-<div class="table-responsive">
-<table class="table table-condensed table-hover">
-<thead>
-<tr>
-<th>
-Version
-</th>
-<th>
-Author
-</th>
-<th>
-Date
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://github.com/TreeTopUnder/UAB_LLops/blob/7913ffe507709039e7a7dea658fcc93715a7b246/docs/figure/03_Osos_v1.Rmd/DA vs Age Group and Sex-1.png" target="_blank">7913ffe</a>
-</td>
-<td>
-Marc Noguera-Julian
-</td>
-<td>
-2022-04-24
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-<div id="abundancia-diferencial-entre-especies-osos-vs-lobos" class="section level3">
-<h3>Abundancia diferencial entre Especies (Osos vs Lobos)</h3>
-<p>En este análisis adicional se pretende detectar los generos bacterianos que son diferencialmente abundantes entre Osos y Lobos, mediante el paquete <em>lefser</em>.</p>
-<p><em>Deliverables: Lefse_vs_Especie.pdf yboxplots independientes para cada género positivo al test</em></p>
-<p>Se observan taxas diferencialmente abundantes entre lobos y osos mediante <em>lefser</em>(<a href="http://www.bioconductor.org/packages/release/bioc/html/lefser.html" class="uri">http://www.bioconductor.org/packages/release/bioc/html/lefser.html</a>). En particular, generos como Escherichia-Shigella y Streptococcus son muy abundantes en Osos mientras que su presencia en muestras de lobos es infrecuente. El cambio en la abundancia relativa de estos generos es, pués, estructural y consistente.</p>
-<p><img src="figure/03_Osos_v1.Rmd/bonus-track%20DA%20vs%20Especie-1.png" width="672" style="display: block; margin: auto;" /></p>
-<p>
-<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-bonus-track-DA-vs-Especie-1">
-Past versions of "bonus-track DA vs Especie-1.png"
-</button>
-</p>
-<div id="fig-no-spaces-bonus-track-DA-vs-Especie-1" class="collapse">
-<div class="table-responsive">
-<table class="table table-condensed table-hover">
-<thead>
-<tr>
-<th>
-Version
-</th>
-<th>
-Author
-</th>
-<th>
-Date
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://github.com/TreeTopUnder/UAB_LLops/blob/7913ffe507709039e7a7dea658fcc93715a7b246/docs/figure/03_Osos_v1.Rmd/bonus-track DA vs Especie-1.png" target="_blank">7913ffe</a>
-</td>
-<td>
-Marc Noguera-Julian
-</td>
-<td>
-2022-04-24
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<p>Como ejemplo de géneros diferencialmente abundantes, se muestran las abundancias de dos de los géneros que mas diferencias presentan entre osos y lobos*. En el caso de los géneros <em>Escherichia-shigella</em> y <em>Streptococcus</em> se detecta un incremento consistente en el numero de <em>reads</em> asignados los dos géneros bacterianos(p&lt;0.001 para los dos generos). <img src="figure/03_Osos_v1.Rmd/include%20graphics%20escherichia-shigella%20and%20streptococcus-1.png" width="480" style="display: block; margin: auto;" /></p>
-<p>
-<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-include-graphics-escherichia-shigella-and-streptococcus-1">
-Past versions of "include graphics escherichia-shigella and streptococcus-1.png"
-</button>
-</p>
-<div id="fig-no-spaces-include-graphics-escherichia-shigella-and-streptococcus-1" class="collapse">
-<div class="table-responsive">
-<table class="table table-condensed table-hover">
-<thead>
-<tr>
-<th>
-Version
-</th>
-<th>
-Author
-</th>
-<th>
-Date
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://github.com/TreeTopUnder/UAB_LLops/blob/7913ffe507709039e7a7dea658fcc93715a7b246/docs/figure/03_Osos_v1.Rmd/include graphics escherichia-shigella and streptococcus-1.png" target="_blank">7913ffe</a>
-</td>
-<td>
-Marc Noguera-Julian
-</td>
-<td>
-2022-04-24
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
+<div id="abundancia-diferencial" class="section level3">
+<h3>Abundancia diferencial</h3>
+<p>En este apartado queremos caracterizar los géneros bacterianos que muestran una abundancia significativamente diferente entre los grupos formados por las variables de interés (dieta_v1 y dieta_v2). Usaremos <em>lefser</em> basado en tests no paramétricos (Wilcox, Kruskal-Wallis) para detectar esos géneros. En este caso, dado que el grupo de dieta “Animal” esta compuesto por solo 3 muestras, lo excluimos del análisis.</p>
+<p><em>Deliverables: Lefse_vs_dieta_v2.pdf y boxplots a nivel de género</em></p>
+<p>No se encuentran géneros con abundancia diferencial significativa en relación a la variable <em>dieta_v1</em>. Si hay varios géneros enriquecidos en el grupo <em>Anima + Vegetal</em> tal y como esta definido en la variable <em>dieta_v2</em>, o sea, incluyendo muestras donde se detecta presencia de vegetales y vertebrados. Géneros bacterianos como <em>Clostridium, Romboutsia, Paeniclostridium</em> estan enriquecidos en el grupo “animal + vegetal”.</p>
+<p><img src="figure/031_Dieta_en_Osos_v1.Rmd/DA%20vs%20dieta-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="figure/031_Dieta_en_Osos_v1.Rmd/include%20graphics%20for%202%20genus%20for%20illustrative%20purposes%20-1.png" width="480" style="display: block; margin: auto;" /></p>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -1057,9 +653,9 @@ other attached packages:
  [5] GenomeInfoDb_1.30.1         IRanges_2.28.0             
  [7] S4Vectors_0.32.3            BiocGenerics_0.40.0        
  [9] MatrixGenerics_1.4.3        matrixStats_0.61.0         
-[11] xlsx_0.6.5                  patchwork_1.1.1            
-[13] ggforce_0.3.3               ggplot2_3.3.5              
-[15] dplyr_1.0.8                 phyloseq_1.38.0            
+[11] ggforce_0.3.3               ggplot2_3.3.5              
+[13] dplyr_1.0.8                 patchwork_1.1.1            
+[15] xlsx_0.6.5                  phyloseq_1.38.0            
 
 loaded via a namespace (and not attached):
   [1] backports_1.4.1        workflowr_1.7.0        plyr_1.8.6            
@@ -1068,45 +664,43 @@ loaded via a namespace (and not attached):
  [10] SuppDists_1.1-9.7      foreach_1.5.2          htmltools_0.5.2       
  [13] fansi_1.0.3            magrittr_2.0.3         memoise_2.0.1         
  [16] paletteer_1.4.0        cluster_2.1.2          Biostrings_2.62.0     
- [19] sandwich_3.0-1         colorspace_2.0-3       ggrepel_0.9.1         
- [22] xfun_0.30              libcoin_1.0-9          crayon_1.5.1          
- [25] RCurl_1.98-1.6         prismatic_1.1.0        jsonlite_1.8.0        
- [28] zeallot_0.1.0          zoo_1.8-10             survival_3.3-1        
- [31] iterators_1.0.14       ape_5.6-2              glue_1.6.2            
- [34] polyclip_1.10-0        gtable_0.3.0           zlibbioc_1.40.0       
- [37] XVector_0.34.0         DelayedArray_0.18.0    statsExpressions_1.3.0
- [40] Rhdf5lib_1.16.0        Rmpfr_0.8-7            scales_1.2.0          
- [43] mvtnorm_1.1-3          DBI_1.1.2              PMCMRplus_1.9.3       
- [46] Rcpp_1.0.8.3           performance_0.8.0      datawizard_0.3.0      
- [49] RColorBrewer_1.1-3     modeltools_0.2-23      ellipsis_0.3.2        
- [52] pkgconfig_2.0.3        reshape_0.8.8          rJava_1.0-6           
- [55] farver_2.1.0           multcompView_0.1-8     sass_0.4.1            
- [58] utf8_1.2.2             here_1.0.1             tidyselect_1.1.2      
- [61] labeling_0.4.2         rlang_1.0.2            reshape2_1.4.4        
- [64] later_1.3.0            effectsize_0.6.0.1     munsell_0.5.0         
- [67] tools_4.1.1            cachem_1.0.6           cli_3.2.0             
- [70] generics_0.1.2         ade4_1.7-18            broom_0.8.0           
- [73] evaluate_0.15          biomformat_1.22.0      stringr_1.4.0         
- [76] fastmap_1.1.0          BWStest_0.2.2          yaml_2.3.5            
- [79] rematch2_2.1.2         knitr_1.37             fs_1.5.2              
- [82] purrr_0.3.4            coin_1.4-2             WRS2_1.1-3            
- [85] nlme_3.1-155           whisker_0.4            correlation_0.8.0     
- [88] compiler_4.1.1         rstudioapi_0.13        tibble_3.1.6          
- [91] tweenr_1.0.2           bslib_0.3.1            stringi_1.7.6         
- [94] highr_0.9              parameters_0.17.0      forcats_0.5.1         
- [97] lattice_0.20-45        Matrix_1.4-0           vegan_2.5-7           
-[100] permute_0.9-7          multtest_2.50.0        vctrs_0.4.1           
-[103] pillar_1.7.0           lifecycle_1.0.1        rhdf5filters_1.6.0    
-[106] mc2d_0.1-21            jquerylib_0.1.4        data.table_1.14.2     
-[109] bitops_1.0-7           insight_0.16.0         httpuv_1.6.5          
-[112] R6_2.5.1               promises_1.2.0.1       codetools_0.2-18      
-[115] boot_1.3-28            MASS_7.3-55            assertthat_0.2.1      
-[118] rhdf5_2.38.0           xlsxjars_0.6.1         rprojroot_2.0.2       
-[121] withr_2.5.0            multcomp_1.4-18        GenomeInfoDbData_1.2.7
-[124] mgcv_1.8-39            bayestestR_0.11.5      parallel_4.1.1        
-[127] grid_4.1.1             tidyr_1.2.0            rmarkdown_2.13        
-[130] git2r_0.30.1           ggstatsplot_0.9.1     </code></pre>
-</div>
+ [19] sandwich_3.0-1         colorspace_2.0-3       xfun_0.30             
+ [22] libcoin_1.0-9          crayon_1.5.1           RCurl_1.98-1.6        
+ [25] prismatic_1.1.0        jsonlite_1.8.0         zeallot_0.1.0         
+ [28] zoo_1.8-10             survival_3.3-1         iterators_1.0.14      
+ [31] ape_5.6-2              glue_1.6.2             polyclip_1.10-0       
+ [34] gtable_0.3.0           zlibbioc_1.40.0        XVector_0.34.0        
+ [37] DelayedArray_0.18.0    statsExpressions_1.3.0 Rhdf5lib_1.16.0       
+ [40] Rmpfr_0.8-7            scales_1.2.0           mvtnorm_1.1-3         
+ [43] DBI_1.1.2              PMCMRplus_1.9.3        Rcpp_1.0.8.3          
+ [46] performance_0.8.0      datawizard_0.3.0       RColorBrewer_1.1-3    
+ [49] modeltools_0.2-23      ellipsis_0.3.2         pkgconfig_2.0.3       
+ [52] reshape_0.8.8          rJava_1.0-6            farver_2.1.0          
+ [55] multcompView_0.1-8     sass_0.4.1             utf8_1.2.2            
+ [58] here_1.0.1             tidyselect_1.1.2       labeling_0.4.2        
+ [61] rlang_1.0.2            reshape2_1.4.4         later_1.3.0           
+ [64] effectsize_0.6.0.1     munsell_0.5.0          tools_4.1.1           
+ [67] cachem_1.0.6           cli_3.2.0              generics_0.1.2        
+ [70] ade4_1.7-18            broom_0.8.0            evaluate_0.15         
+ [73] biomformat_1.22.0      stringr_1.4.0          fastmap_1.1.0         
+ [76] BWStest_0.2.2          yaml_2.3.5             rematch2_2.1.2        
+ [79] knitr_1.37             fs_1.5.2               purrr_0.3.4           
+ [82] coin_1.4-2             WRS2_1.1-3             nlme_3.1-155          
+ [85] correlation_0.8.0      compiler_4.1.1         rstudioapi_0.13       
+ [88] tibble_3.1.6           tweenr_1.0.2           bslib_0.3.1           
+ [91] stringi_1.7.6          highr_0.9              parameters_0.17.0     
+ [94] forcats_0.5.1          lattice_0.20-45        Matrix_1.4-0          
+ [97] vegan_2.5-7            permute_0.9-7          multtest_2.50.0       
+[100] vctrs_0.4.1            pillar_1.7.0           lifecycle_1.0.1       
+[103] rhdf5filters_1.6.0     mc2d_0.1-21            jquerylib_0.1.4       
+[106] data.table_1.14.2      bitops_1.0-7           insight_0.16.0        
+[109] httpuv_1.6.5           R6_2.5.1               promises_1.2.0.1      
+[112] codetools_0.2-18       boot_1.3-28            MASS_7.3-55           
+[115] assertthat_0.2.1       rhdf5_2.38.0           xlsxjars_0.6.1        
+[118] rprojroot_2.0.2        withr_2.5.0            multcomp_1.4-18       
+[121] GenomeInfoDbData_1.2.7 mgcv_1.8-39            bayestestR_0.11.5     
+[124] parallel_4.1.1         grid_4.1.1             tidyr_1.2.0           
+[127] rmarkdown_2.13         git2r_0.30.1           ggstatsplot_0.9.1     </code></pre>
 </div>
 </div>
 
