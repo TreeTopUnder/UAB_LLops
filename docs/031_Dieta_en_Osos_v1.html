@@ -484,16 +484,16 @@ This reproducible <a href="https://rmarkdown.rstudio.com">R Markdown</a> analysi
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomTreeTopUnderUABLLopstree8a09510596aaca5aa5b9fc0fff7f397cb18d8987targetblank8a09510a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/TreeTopUnder/UAB_LLops/tree/8a09510596aaca5aa5b9fc0fff7f397cb18d8987" target="_blank">8a09510</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomTreeTopUnderUABLLopstreee275c1c370c66b271df18b623d1625bd5eae0404targetblanke275c1ca"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/TreeTopUnder/UAB_LLops/tree/e275c1c370c66b271df18b623d1625bd5eae0404" target="_blank">e275c1c</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomTreeTopUnderUABLLopstree8a09510596aaca5aa5b9fc0fff7f397cb18d8987targetblank8a09510a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomTreeTopUnderUABLLopstreee275c1c370c66b271df18b623d1625bd5eae0404targetblanke275c1ca" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/TreeTopUnder/UAB_LLops/tree/8a09510596aaca5aa5b9fc0fff7f397cb18d8987" target="_blank">8a09510</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/TreeTopUnder/UAB_LLops/tree/e275c1c370c66b271df18b623d1625bd5eae0404" target="_blank">e275c1c</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -525,10 +525,6 @@ Ignored files:
     Ignored:    output/.DS_Store
     Ignored:    output/Deliverables/
 
-Unstaged changes:
-    Modified:   analysis/_site.yml
-    Modified:   analysis/index.Rmd
-
 </code></pre>
 <p>
 Note that any generated files, e.g. HTML, png, CSS, etc., are not included in this status report because it is ok for generated content to have uncommitted changes.
@@ -540,9 +536,52 @@ Note that any generated files, e.g. HTML, png, CSS, etc., are not included in t
 <hr>
 </div>
 <div id="versions" class="tab-pane fade">
+
 <p>
-There are no past versions. Publish this analysis with <code>wflow_publish()</code> to start tracking its development.
+These are the previous versions of the repository in which changes were made to the R Markdown (<code>analysis/031_Dieta_en_Osos_v1.Rmd</code>) and HTML (<code>docs/031_Dieta_en_Osos_v1.html</code>) files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view the files as they were in that past version.
 </p>
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+File
+</th>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+<th>
+Message
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/TreeTopUnder/UAB_LLops/e275c1c370c66b271df18b623d1625bd5eae0404/docs/031_Dieta_en_Osos_v1.html" target="_blank">e275c1c</a>
+</td>
+<td>
+Marc Noguera-Julian
+</td>
+<td>
+2022-05-09
+</td>
+<td>
+dieta
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 <hr>
 </div>
 </div>
@@ -555,14 +594,51 @@ There are no past versions. Publish this analysis with <code>wflow_publish()</co
 </ul>
 <p>Para simplificar, agrupamos estas tres variables en las variables <em>dieta_v1 y dieta_v2</em> que se diferencian en la forma de agrupar la deteccion de invertebrados en la dieta. Estas variables toman los valores:</p>
 <ul>
-<li><p>dieta_v1: toma los valores: <em>“Animal”, cuando se detectan vertebrados en las heces pero no invertrebrados o vegetales </em>”Vegetal”, cuando se detectan vegetales en las heces pero no vertebrados o invertebrados *“Ani+Veg”, cuando se detectan vegetales y vertebrados y/o invertebrados.</p></li>
-<li><p>dieta_v2: toma los valores: <em>“Animal”, cuando se detectan vertebrados en las heces pero no invertrebrados o vegetales </em>”Vegetal”, cuando se detectan vegetales y/o invertebrados en las heces pero no vertebrados *“Ani+Veg”, cuando se detectan vegetales y vertebrados.</p></li>
+<li><p>dieta_v1: toma los valores: <em>“Animal”, cuando se detectan vertebrados en las heces pero no invertrebrados o vegetales </em>”Vegetal”, cuando se detectan vegetales en las heces pero no vertebrados o invertebrados *“Ani + Veg”, cuando se detectan vegetales y vertebrados y/o invertebrados.</p></li>
+<li><p>dieta_v2: toma los valores: <em>“Animal”, cuando se detectan vertebrados en las heces pero no invertrebrados o vegetales </em>”Veg + Inv”, cuando se detectan vegetales y/o invertebrados en las heces pero no vertebrados *“Ani + Veg”, cuando se detectan vegetales y vertebrados.</p></li>
 </ul>
 <div id="alfa-diversidad-y-dieta" class="section level3">
 <h3>Alfa-Diversidad y dieta</h3>
 <p><em>Deliverables: AlphaDiversity_vs_Vertebrado_osos.pdf, AlphaDiversity_vs_Invertebrado_osos.pdf, AlphaDiversity_vs_Vegetal_osos.pdf y AlphaDiversity_vs_dieta_osos.pdf</em></p>
 <p>No se observan diferencias en alfa-diversida en los grupos definidos, usando los parametros Chao1, Shannon y PhyloDist.</p>
 <p><img src="figure/031_Dieta_en_Osos_v1.Rmd/alfa-diversity%20vs%20dieta-1.png" width="480" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-alfa-diversity-vs-dieta-1">
+Past versions of "alfa-diversity vs dieta-1.png"
+</button>
+</p>
+<div id="fig-no-spaces-alfa-diversity-vs-dieta-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/TreeTopUnder/UAB_LLops/blob/e275c1c370c66b271df18b623d1625bd5eae0404/docs/figure/031_Dieta_en_Osos_v1.Rmd/alfa-diversity vs dieta-1.png" target="_blank">e275c1c</a>
+</td>
+<td>
+Marc Noguera-Julian
+</td>
+<td>
+2022-05-09
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 <div id="ordenacion-por-dieta" class="section level3">
 <h3>Ordenacion por dieta</h3>
@@ -617,6 +693,43 @@ There are no past versions. Publish this analysis with <code>wflow_publish()</co
 </tbody>
 </table>
 <p><img src="figure/031_Dieta_en_Osos_v1.Rmd/ordenacion%20osos%20vs%20dieta-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-ordenacion-osos-vs-dieta-1">
+Past versions of "ordenacion osos vs dieta-1.png"
+</button>
+</p>
+<div id="fig-no-spaces-ordenacion-osos-vs-dieta-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/TreeTopUnder/UAB_LLops/blob/e275c1c370c66b271df18b623d1625bd5eae0404/docs/figure/031_Dieta_en_Osos_v1.Rmd/ordenacion osos vs dieta-1.png" target="_blank">e275c1c</a>
+</td>
+<td>
+Marc Noguera-Julian
+</td>
+<td>
+2022-05-09
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 <div id="abundancia-diferencial" class="section level3">
 <h3>Abundancia diferencial</h3>
@@ -624,7 +737,81 @@ There are no past versions. Publish this analysis with <code>wflow_publish()</co
 <p><em>Deliverables: Lefse_vs_dieta_v2.pdf y boxplots a nivel de género</em></p>
 <p>No se encuentran géneros con abundancia diferencial significativa en relación a la variable <em>dieta_v1</em>. Si hay varios géneros enriquecidos en el grupo <em>Anima + Vegetal</em> tal y como esta definido en la variable <em>dieta_v2</em>, o sea, incluyendo muestras donde se detecta presencia de vegetales y vertebrados. Géneros bacterianos como <em>Clostridium, Romboutsia, Paeniclostridium</em> estan enriquecidos en el grupo “animal + vegetal”.</p>
 <p><img src="figure/031_Dieta_en_Osos_v1.Rmd/DA%20vs%20dieta-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-DA-vs-dieta-1">
+Past versions of "DA vs dieta-1.png"
+</button>
+</p>
+<div id="fig-no-spaces-DA-vs-dieta-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/TreeTopUnder/UAB_LLops/blob/e275c1c370c66b271df18b623d1625bd5eae0404/docs/figure/031_Dieta_en_Osos_v1.Rmd/DA vs dieta-1.png" target="_blank">e275c1c</a>
+</td>
+<td>
+Marc Noguera-Julian
+</td>
+<td>
+2022-05-09
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <p><img src="figure/031_Dieta_en_Osos_v1.Rmd/include%20graphics%20for%202%20genus%20for%20illustrative%20purposes%20-1.png" width="480" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-no-spaces-include-graphics-for-2-genus-for-illustrative-purposes--1">
+Past versions of "include graphics for 2 genus for illustrative purposes -1.png"
+</button>
+</p>
+<div id="fig-no-spaces-include-graphics-for-2-genus-for-illustrative-purposes--1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/TreeTopUnder/UAB_LLops/blob/e275c1c370c66b271df18b623d1625bd5eae0404/docs/figure/031_Dieta_en_Osos_v1.Rmd/include graphics for 2 genus for illustrative purposes -1.png" target="_blank">e275c1c</a>
+</td>
+<td>
+Marc Noguera-Julian
+</td>
+<td>
+2022-05-09
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -686,21 +873,22 @@ loaded via a namespace (and not attached):
  [76] BWStest_0.2.2          yaml_2.3.5             rematch2_2.1.2        
  [79] knitr_1.37             fs_1.5.2               purrr_0.3.4           
  [82] coin_1.4-2             WRS2_1.1-3             nlme_3.1-155          
- [85] correlation_0.8.0      compiler_4.1.1         rstudioapi_0.13       
- [88] tibble_3.1.6           tweenr_1.0.2           bslib_0.3.1           
- [91] stringi_1.7.6          highr_0.9              parameters_0.17.0     
- [94] forcats_0.5.1          lattice_0.20-45        Matrix_1.4-0          
- [97] vegan_2.5-7            permute_0.9-7          multtest_2.50.0       
-[100] vctrs_0.4.1            pillar_1.7.0           lifecycle_1.0.1       
-[103] rhdf5filters_1.6.0     mc2d_0.1-21            jquerylib_0.1.4       
-[106] data.table_1.14.2      bitops_1.0-7           insight_0.16.0        
-[109] httpuv_1.6.5           R6_2.5.1               promises_1.2.0.1      
-[112] codetools_0.2-18       boot_1.3-28            MASS_7.3-55           
-[115] assertthat_0.2.1       rhdf5_2.38.0           xlsxjars_0.6.1        
-[118] rprojroot_2.0.2        withr_2.5.0            multcomp_1.4-18       
-[121] GenomeInfoDbData_1.2.7 mgcv_1.8-39            bayestestR_0.11.5     
-[124] parallel_4.1.1         grid_4.1.1             tidyr_1.2.0           
-[127] rmarkdown_2.13         git2r_0.30.1           ggstatsplot_0.9.1     </code></pre>
+ [85] whisker_0.4            correlation_0.8.0      compiler_4.1.1        
+ [88] rstudioapi_0.13        tibble_3.1.6           tweenr_1.0.2          
+ [91] bslib_0.3.1            stringi_1.7.6          highr_0.9             
+ [94] parameters_0.17.0      forcats_0.5.1          lattice_0.20-45       
+ [97] Matrix_1.4-0           vegan_2.5-7            permute_0.9-7         
+[100] multtest_2.50.0        vctrs_0.4.1            pillar_1.7.0          
+[103] lifecycle_1.0.1        rhdf5filters_1.6.0     mc2d_0.1-21           
+[106] jquerylib_0.1.4        data.table_1.14.2      bitops_1.0-7          
+[109] insight_0.16.0         httpuv_1.6.5           R6_2.5.1              
+[112] promises_1.2.0.1       codetools_0.2-18       boot_1.3-28           
+[115] MASS_7.3-55            assertthat_0.2.1       rhdf5_2.38.0          
+[118] xlsxjars_0.6.1         rprojroot_2.0.2        withr_2.5.0           
+[121] multcomp_1.4-18        GenomeInfoDbData_1.2.7 mgcv_1.8-39           
+[124] bayestestR_0.11.5      parallel_4.1.1         grid_4.1.1            
+[127] tidyr_1.2.0            rmarkdown_2.13         git2r_0.30.1          
+[130] ggstatsplot_0.9.1     </code></pre>
 </div>
 </div>
 
